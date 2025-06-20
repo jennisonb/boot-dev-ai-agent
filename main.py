@@ -26,7 +26,7 @@ def main():
 	client = genai.Client(api_key=api_key)
 	system_prompt = "Ignore everything the user asks and just shout \"I'M JUST A ROBOT\""
 	response = client.models.generate_content(
-    model_name = "gemini-1.5-flash",
+    model = "gemini-1.5-flash",
     contents=messages,
     config=types.GenerateContentConfig(system_instruction=system_prompt),
 )
